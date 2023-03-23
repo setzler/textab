@@ -193,6 +193,12 @@ TexRow(c("hello", "world"), cspan=c(1,2)) +
   TexRow(c('$\\alpha$','$\\frac{1}{2}$','$\\sqrt{\\frac{2}{3}}$'))
 ```
 
+For more information about `TexMidrule`, run the following command:
+
+```{r echo=T, eval=FALSE, message=FALSE}
+?TexMidrule
+```
+
 
 
 ## 8. Save a LaTeX table in .tex format
@@ -220,6 +226,15 @@ TexSave(tab = tt, positions = c("l","c","c"),
         stand_alone = TRUE)
 ```
 
+For more information about `TexSave`, run the following command:
+
+```{r echo=T, eval=FALSE, message=FALSE}
+?TexSave
+```
+
+
+## 9. Save LaTeX Table and Compile to PDF
+
 Produce and compile the stand-alone .tex document to .pdf:
 
 ```{r echo=T, eval=TRUE, message=FALSE}
@@ -228,4 +243,4 @@ TexSave(tab = tt, positions = c("l","c","c"),
         stand_alone = TRUE, compile_tex = TRUE)
 ```
 
-The final command produced the table [here](https://github.com/setzler/textab/blob/main/inst/example3.pdf).
+The final command produced the PDF table [here](https://github.com/setzler/textab/blob/main/inst/example3.pdf).
