@@ -1,8 +1,19 @@
 
-# This function formats numbers in a table within a LaTeX document
-tt_formatNum <- function(x, dec = 4, big.mark = ",", percentage = FALSE, dollar = FALSE, se = FALSE, pvalues = NULL) {
+# This function expands a scalar to a vector.
+expansion_function <- function(x, y) {
+  if (length(y) > 1) {
+    stopifnot(length(x) == length(y))
+  }
+  if (length(y) == 1) {
+    y <- rep(y, length(x))
+  }
+  return(y)
+}
 
-  # require that x is numeric 
+# This function formats numbers in a table within a LaTeX document
+tt_formatNum <- function(x, dec = 3, percentage = FALSE, dollar = FALSE, se = FALSE, pvalues = NULL) {
+
+  # require that x is numeric
   stopifnot(is.numeric(x))
   # require that dec is numeric
   stopifnot(is.numeric(dec))
@@ -21,20 +32,6 @@ tt_formatNum <- function(x, dec = 4, big.mark = ",", percentage = FALSE, dollar 
   stopifnot(is.logical(dollar))
   # require that se is logical
   stopifnot(is.logical(se))
-  # require that big.mark is a character of length 1
-  stopifnot(is.character(big.mark))
-  stopifnot(length(big.mark) == 1)
-  
-  # define expansion function
-  expansion_function <- function(x, y) {
-    if (length(y) > 1) {
-      stopifnot(length(x) == length(y))
-    }
-    if (length(y) == 1) {
-      y <- rep(y, length(x))
-    }
-    return(y)
-  }
 
   # expand inputs
   dec <- expansion_function(x, dec)

@@ -7,15 +7,14 @@
 TexRow(
   value,
   cspan = rep(1, length(value)),
-  position = rep("c", length(value)),
+  position = "r",
   surround = "\%s",
-  dec = 4,
-  big.mark = ",",
+  space = 0,
+  dec = 3,
   percentage = FALSE,
   dollar = FALSE,
   se = FALSE,
-  pvalues = NULL,
-  space = 0
+  pvalues = NULL
 )
 }
 \arguments{
@@ -23,13 +22,13 @@ TexRow(
 
 \item{cspan}{(integer). If greater than 1, \verb{multicolumn\{cspan\}\{position\}\{value\}} will be used. For example, cspan=c(1,2,1) means that the second entry of \code{value} should span 2 columns. Default is cspan = rep(1, length(value)).}
 
-\item{position}{(character). If cspan > 1, \verb{multicolumn\{cspan\}\{position\}\{value\}} will be used. For example, position=c("l","c","r") means that the second entry of \code{value} should be centered. Default is position = rep("c", length(value)).}
+\item{position}{(character). If cspan > 1, \verb{multicolumn\{cspan\}\{position\}\{value\}} will be used. For example, position=c("l","c","r") means that the second entry of \code{value} should be centered. Default is "r".}
 
 \item{surround}{(character). This will be applied to the value as sprintf(surround, value), so surround must contain the "\%s" placeholder. Default is "\%s".}
 
-\item{dec}{(integer). Only relevant if \code{value} is numeric. Number of decimal places. If scalar, the same decimal will be used for each entry of \code{value}. If vector, must be the same length as \code{value}.}
+\item{space}{(numeric). The number of points (pt) of vertical space to append to the end of the row. Default is 0.}
 
-\item{big.mark}{(character). Only relevant if \code{value} is numeric. Used as separator within large numbers. Default is "," which produces a comma (as in 1,201,390).}
+\item{dec}{(integer). Only relevant if \code{value} is numeric. Number of decimal places. If scalar, the same decimal will be used for each entry of \code{value}. If vector, must be the same length as \code{value}. Default is 3.}
 
 \item{percentage}{(logical). Only relevant if \code{value} is numeric. If TRUE, a percentage symbol "\%" will be added to the end of each entry of \code{value}. If scalar, it will be used for all entries of \code{value}. If vector, must be the same length as \code{value}.}
 
@@ -37,9 +36,7 @@ TexRow(
 
 \item{se}{(logical). Only relevant if \code{value} is numeric. If TRUE, \code{value} will be wrapped in parentheses. If scalar, it will be used for all entries of \code{value}. If vector, must be the same length as \code{value}.}
 
-\item{pvalues}{(numeric). Only relevant if \code{value} is numeric. If not NULL, must be numeric. If less than 0.1, a star "\emph{" will be added to the end of each entry of \code{value}. If less than 0.05, a second star "}" will be appended. If less than 0.01, a third star "*" will be appended. If scalar, it will be used for all entries of \code{value}. If vector, must be the same length as \code{value}.}
-
-\item{space}{(numeric). The number of points (pt) of vertical space to append to the end of the row. Default is 3, which creates 3pt of vertical space.}
+\item{pvalues}{(numeric). Only relevant if \code{value} is numeric. If not NULL, must be numeric. If less than 0.1, a star will be added to the end of each entry of \code{value}. If less than 0.05, a second star will be appended. If less than 0.01, a third star  will be appended. If scalar, the same p-value will be assumed for all entries of \code{value}. If vector, must be the same length as \code{value}.}
 }
 \description{
 This function creates a row of a LaTeX table.
