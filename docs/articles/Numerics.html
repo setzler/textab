@@ -82,7 +82,116 @@
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://setzler.github.io/textab/" class="external-link">textab</a></span><span class="op">)</span></span></code></pre></div>
-  </main>
+<p>Basic numeric row:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.0</span>, <span class="fl">1.01</span>, <span class="fl">1.001</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span><span class="op">)</span></span>
+<span><span class="co">#&gt; % created using textables on Wed Mar 22 21:06:00 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
+<span><span class="co">#&gt; 1.0000 &amp; 1.0100 &amp; 1.0010 \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+<div class="section level2">
+<h2 id="rounding">1. Rounding<a class="anchor" aria-label="anchor" href="#rounding"></a>
+</h2>
+<p>Numeric row rounded to the second decimal place:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.0</span>, <span class="fl">1.01</span>, <span class="fl">1.001</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="co">#&gt; % created using textables on Wed Mar 22 21:06:00 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
+<span><span class="co">#&gt; 1.00 &amp; 1.01 &amp; 1.00 \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+<p>Entry-specific rounding:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.0</span>, <span class="fl">1.01</span>, <span class="fl">1.001</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">4</span>,<span class="fl">6</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; % created using textables on Wed Mar 22 21:06:00 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
+<span><span class="co">#&gt; 1.00 &amp; 1.0100 &amp; 1.001000 \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="percentage">2. Percentage<a class="anchor" aria-label="anchor" href="#percentage"></a>
+</h2>
+<p>Numeric row where all numbers are percentages:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">20</span>,<span class="fl">30</span>,<span class="fl">40</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">0</span>, percentage <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; % created using textables on Wed Mar 22 21:06:00 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
+<span><span class="co">#&gt; 20\% &amp; 30\% &amp; 40\% \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+<p>Only some entries are percentages:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2.4344</span>, <span class="fl">40.12</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">1</span><span class="op">)</span>, percentage <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; % created using textables on Wed Mar 22 21:06:00 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
+<span><span class="co">#&gt; 2.43 &amp; 40.1\% \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="dollar-sign">3. Dollar Sign<a class="anchor" aria-label="anchor" href="#dollar-sign"></a>
+</h2>
+<p>Numeric row where all numbers are dollars:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">20.32</span>,<span class="fl">30.67</span>,<span class="fl">40.98</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">2</span>, dollar <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; % created using textables on Wed Mar 22 21:06:00 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
+<span><span class="co">#&gt; \$20.32 &amp; \$30.67 &amp; \$40.98 \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+<p>Only some entries are in dollars:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2.4344</span>, <span class="fl">40.12</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">1</span><span class="op">)</span>, percentage <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span>, dollar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; % created using textables on Wed Mar 22 21:06:00 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
+<span><span class="co">#&gt; \$2.43 &amp; 40.1\% \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="standard-error">4. Standard Error<a class="anchor" aria-label="anchor" href="#standard-error"></a>
+</h2>
+<p>Numeric row where all numbers are standard errors:</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">20.32</span>,<span class="fl">30.67</span>,<span class="fl">40.98</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">2</span>, se <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; % created using textables on Wed Mar 22 21:06:00 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
+<span><span class="co">#&gt; (20.32) &amp; (30.67) &amp; (40.98) \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+<p>Only some entries are standard errors:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2.4344</span>, <span class="fl">0.3815</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">3</span>, se <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; % created using textables on Wed Mar 22 21:06:00 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
+<span><span class="co">#&gt; 2.434 &amp; (0.382) \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="p-values">5. p-values<a class="anchor" aria-label="anchor" href="#p-values"></a>
+</h2>
+<p>Infer p-value from numeric vector:</p>
+<ul>
+<li>
+<code>p &lt; 0.1</code> gives 1 star</li>
+<li>
+<code>p &lt; 0.05</code> gives 2 stars</li>
+<li>
+<code>p &lt; 0.01</code> gives 3 stars</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">2</span>, pvalues <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.09</span>, <span class="fl">0.04</span>, <span class="fl">0.009</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; % created using textables on Wed Mar 22 21:06:01 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
+<span><span class="co">#&gt; 1.00* &amp; 2.00** &amp; 3.00*** \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 

@@ -39,6 +39,10 @@ TexRow <- function(value, cspan = rep(1, length(value)), position = rep("c", len
   surround <- expansion_function(value, surround)
   position <- expansion_function(value, position)
 
+  for(ii in 1:length(value)){
+    value[ii] = sprintf(surround[ii], value[ii])
+  }
+
   # apply column spanning.
   I <- which(cspan > 1)
   value[I] <- sprintf("\\multicolumn{%i}{%s}{%s}", cspan[I], position[I], value[I])
@@ -56,13 +60,6 @@ TexRow <- function(value, cspan = rep(1, length(value)), position = rep("c", len
 
   # finish.
   output = tt_block(sum(cspan), length(cspan), row_list, row_ending = ending)
-
-  # # add space under row
-  # if(space > 0){
-  #   output = output + vspace(space)
-  # }
-
-  # done
   return(output)
 
 }

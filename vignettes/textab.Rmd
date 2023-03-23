@@ -72,13 +72,6 @@ vec <- c(1.0, 1.01, 1.001)
 TexRow(vec, dec = 2)
 ```
 
-Numeric row with entry-specific rounding:
-
-```{r echo=T, eval=TRUE, message=FALSE}
-vec <- c(1.0, 1.01, 1.001)
-TexRow(vec, dec = c(1,2,3))
-```
-
 There are four other arguments specific to numeric rows:
 
 - `percentage`: if TRUE, add a "%" sign after each number.
@@ -86,12 +79,40 @@ There are four other arguments specific to numeric rows:
 - `se`: if TRUE, surround each number with parentheses.
 - `pvalues`: if provided, these numbers are used to add stars "*" after the numbers.
 
-See the TexRow documentation for examples with these other numeric arguments.
+See [this article](https://setzler.github.io/textab/articles/Numerics.html) about formatting numbers. You can also run the following command in R to see the available formatting options:
+
+```{r echo=T, eval=FALSE, message=FALSE}
+?TexRow
+```
+
+
+## 3. Custom Formatting using Surround
+
+While many common formatting options are explicitly provided in `TexRow`, we also include the `surround` argument so that the user can specify custom formatting.
+
+The surround argument allows you to provide raw LaTeX code. Place the `%s` symbol wherever your number or character should be placed.
+
+Suppose you wish to make each number red. In LaTeX, you can make a number red using the code `{\color{red} %s}`, where `%s` indicates where the number should go. In order to make each number red, we would specify the following:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec = c(5.081, 2.345, 6.789)
+TexRow(vec, dec = 1, surround = "{\\color{red} %s}")
+```
+
+Note: Double backslashes are required for LaTeX commands.
+
+The `surround` argument works for character vectors as well, and we can apply different formatting to each value:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec = c("hello", "world")
+TexRow(vec, dec = 1, surround = c("{\\color{blue} %s}", "\\frac{%s}{2}"))
+```
 
 
 
 
-## 3. Multicolumn rows
+
+## 4. Multicolumn Rows
 
 Merge and center the second and third rows using the `cspan` argument:
 
@@ -117,7 +138,7 @@ TexRow(vec, cspan = c(2,3), position = c("l","r"))
 
 
 
-## 4. Combine Rows
+## 5. Combine Rows
 
 #### Combine Rows Side-by-side
 
@@ -143,7 +164,7 @@ combined_row
 
 
 
-## 5. Vertical space between rows
+## 6. Vertical Space between Rows
 
 To add 3pt of space between two rows:
 
@@ -154,7 +175,7 @@ TexRow(c("hello", "world"), space=3) +
 
 
 
-## 6. Midrule and Partial Midrules
+## 7. Midrule and Partial Midrules
 
 Add a full midrule between two rows:
 
@@ -174,12 +195,12 @@ TexRow(c("hello", "world"), cspan=c(1,2)) +
 
 
 
-## 7. Save a LaTeX table in .tex format
+## 8. Save a LaTeX table in .tex format
 
-We will work with this simple table:
+Let us work with the following table:
 
 ```{r echo=T, eval=TRUE, message=FALSE}
-tt = TexRow(c("hello", "world"), cspan=c(1,2)) + 
+tt = TexRow(c("hello", "world"), cspan=c(1,2), surround = c("{\\color{red} %s}", "{\\color{blue} %s}")) + 
   TexMidrule(list(c(1,1), c(2,3))) +
   TexRow(c('$\\alpha$','$\\frac{1}{2}$','$\\sqrt{\\frac{2}{3}}$'))
 ```
@@ -206,3 +227,5 @@ TexSave(tab = tt, positions = c("l","c","c"),
         filename = "example3", output_path = "~/github/textab/inst/", 
         stand_alone = TRUE, compile_tex = TRUE)
 ```
+
+The final command produced the table [here](https://github.com/setzler/textab/blob/main/inst/example3.pdf).

@@ -17,3 +17,112 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(textab)
 ```
+
+
+Basic numeric row:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec <- c(1.0, 1.01, 1.001)
+TexRow(vec)
+```
+
+
+## 1. Rounding
+
+Numeric row rounded to the second decimal place:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec <- c(1.0, 1.01, 1.001)
+TexRow(vec, dec = 2)
+```
+
+Entry-specific rounding:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec <- c(1.0, 1.01, 1.001)
+TexRow(vec, dec = c(2,4,6))
+```
+
+## 2. Percentage
+
+
+Numeric row where all numbers are percentages:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec <- c(20,30,40)
+TexRow(vec, dec = 0, percentage = TRUE)
+```
+
+Only some entries are percentages:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec <- c(2.4344, 40.12)
+TexRow(vec, dec = c(2,1), percentage = c(FALSE, TRUE))
+```
+
+
+## 3. Dollar Sign
+
+
+Numeric row where all numbers are dollars:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec <- c(20.32,30.67,40.98)
+TexRow(vec, dec = 2, dollar = TRUE)
+```
+
+Only some entries are in dollars:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec <- c(2.4344, 40.12)
+TexRow(vec, dec = c(2,1), percentage = c(FALSE, TRUE), dollar = c(TRUE, FALSE))
+```
+
+
+
+## 4. Standard Error
+
+
+Numeric row where all numbers are standard errors:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec <- c(20.32,30.67,40.98)
+TexRow(vec, dec = 2, se = TRUE)
+```
+
+Only some entries are standard errors:
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec <- c(2.4344, 0.3815)
+TexRow(vec, dec = 3, se = c(FALSE, TRUE))
+```
+
+
+
+## 5. p-values
+
+
+Infer p-value from numeric vector:
+
+- `p < 0.1` gives 1 star
+- `p < 0.05` gives 2 stars
+- `p < 0.01` gives 3 stars
+
+```{r echo=T, eval=TRUE, message=FALSE}
+vec <- c(1,2,3)
+TexRow(vec, dec = 2, pvalues = c(0.09, 0.04, 0.009))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
