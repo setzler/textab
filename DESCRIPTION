@@ -1,0 +1,19 @@
+Package: textab
+Title: Create Highly-Customized LaTeX tables in R
+Version: 0.1
+Authors@R: c(
+      person("Thibaut", "Lamadon", , "thibaut.lamadon@gmail.com", role = c("aut")),
+      person("Bradley", "Setzler", , "bradley.setzler@gmail.com", role = c("aut", "cre"))
+    )
+Description: This package generates TeX tables directly from R.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder:
+    knitr
+URL: https://setzler.github.io/textab/
+BugReports: https://github.com/setzler/textab/issues
