@@ -37,8 +37,7 @@ Compile a tabular object to a pdf file
 }
 \examples{
 # consider the following example:
-tt = TexRow(c("hello", "world"), cspan=c(1,2), surround = c("{\\\\color{red} \%s}", "{\\\\color{blue} \%s}")) +
-TexMidrule(list(c(1,1), c(2,3))) + TexRow(c('$\\\\alpha$','$\\\\frac{1}{2}$','$\\\\sqrt{\\\\frac{2}{3}}$'))
+tt = TexRow(c("hello", "world"), cspan=c(1,2), surround = c("{\\\\color{red} \%s}", "{\\\\color{blue} \%s}")) + TexMidrule(list(c(1,1), c(2,3))) + TexRow(c('$\\\\alpha$','$\\\\frac{1}{2}$','$\\\\sqrt{\\\\frac{2}{3}}$'))
 
 # Save a simple .tex document containing this table:
 # not run:

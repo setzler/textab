@@ -9,8 +9,7 @@
 #' @param compile_tex (logical). If TRUE and stand_alone is TRUE, pdflatex is used to compile the TeX table into a PDF. This is only allowed if stand_alone=TRUE. Default is FALSE.
 #' @examples
 #' # consider the following example:
-#' tt = TexRow(c("hello", "world"), cspan=c(1,2), surround = c("{\\color{red} %s}", "{\\color{blue} %s}")) +
-#' TexMidrule(list(c(1,1), c(2,3))) + TexRow(c('$\\alpha$','$\\frac{1}{2}$','$\\sqrt{\\frac{2}{3}}$'))
+#' tt = TexRow(c("hello", "world"), cspan=c(1,2), surround = c("{\\color{red} %s}", "{\\color{blue} %s}")) + TexMidrule(list(c(1,1), c(2,3))) + TexRow(c('$\\alpha$','$\\frac{1}{2}$','$\\sqrt{\\frac{2}{3}}$'))
 #'
 #' # Save a simple .tex document containing this table:
 #' # not run:
