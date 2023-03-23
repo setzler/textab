@@ -105,7 +105,7 @@ The `surround` argument works for character vectors as well, and we can apply di
 
 ```{r echo=T, eval=TRUE, message=FALSE}
 vec = c("hello", "world")
-TexRow(vec, dec = 1, surround = c("{\\color{blue} %s}", "\\frac{%s}{2}"))
+TexRow(vec, dec = 1, surround = c("{\\color{blue} %s}", "$\\frac{\\text{%s}}{2}$"))
 ```
 
 
