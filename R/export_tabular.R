@@ -8,27 +8,29 @@
 #' @param stand_alone (logical). If TRUE, the tabular will be exported in a .tex file that can be compiled to PDF directly (rather than included in a separate .tex file). Default is FALSE.
 #' @param compile_tex (logical). If TRUE and stand_alone is TRUE, pdflatex is used to compile the TeX table into a PDF. This is only allowed if stand_alone=TRUE. Default is FALSE.
 #' @examples
-#' # consider the following example:
-#' tt = TexRow(c("hello", "world"), cspan=c(1,2), surround = c("{\\color{red} %s}", "{\\color{blue} %s}")) + TexMidrule(list(c(1,1), c(2,3))) + TexRow(c('$\\alpha$','$\\frac{1}{2}$','$\\sqrt{\\frac{2}{3}}$'))
+#' # consider the following example textab object:
+#' tt = TexRow(c("hello", "world")) + TexRow(c(1,2))
+#'
+#' # define the positions for each column:
+#' pos = c("l","c")
+#'
+#' # choose an output path:
+#' op = getwd()
 #'
 #' # Save a simple .tex document containing this table:
 #' # not run:
-#' # TexSave(tab = tt, positions = c("l","c","c"), filename = "example1", output_path = "~/github/textab/inst/")
+#' # TexSave(tab = tt, positions = pos, filename = "example1", output_path = op)
 #'
-#' # Save the .tex document as stand-alone, which includes LaTex headers and packages:
+#' # Save the .tex document as stand-alone, which includes LaTeX headers and packages:
 #' # not run:
-#' # TexSave(tab = tt, positions = c("l","c","c"), filename = "example2", output_path = "~/github/textab/inst/", stand_alone = TRUE)
-#'
-#' # Save the .tex document as stand-alone and compile it to PDF:
-#' # not run:
-#' # TexSave(tab = tt, positions = c("l","c","c"), filename = "example2", output_path = "~/github/textab/inst/", stand_alone = TRUE, compile_tex = TRUE)
+#' # TexSave(tab = tt, positions = pos, filename = "example2", output_path = op, stand_alone = TRUE)
 #'
 #' @return A list containing the path to the .tex file and the name of the .tex file.
 #' @export
 TexSave <- function(tab, filename, positions, pretty_rules = TRUE, output_path = getwd(), stand_alone=FALSE, compile_tex = FALSE) {
   tab <- tt_tabularize(tab, pretty_rules = pretty_rules, positions = positions)
   current_wd <- getwd()
-  if(!(class(output_path)=='character')){
+  if (!(class(output_path) %in% c("character"))) {
     stop("output_path must be character.")
   }
   if(!dir.exists(output_path)){

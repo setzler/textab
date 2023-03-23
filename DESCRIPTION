@@ -5,7 +5,7 @@ Authors@R: c(
       person("Thibaut", "Lamadon", , "thibaut.lamadon@gmail.com", role = c("aut","cph")),
       person("Bradley", "Setzler", , "bradley.setzler@gmail.com", role = c("aut","cre","cph"))
     )
-Description: This package generates LaTeX tables directly from R. It builds LaTeX tables in blocks, in the spirit of ggplot2, using the + and - operators for concatenation in the vertical or horizontal direction, respectively. It exports tables in the LaTeX tabular environment in .tex code. It can compiled a .pdf document from the .tex code.
+Description: Generates LaTeX tables directly from R. It builds LaTeX tables in blocks, in the spirit of ggplot2, using the + and - operators for concatenation in the vertical or horizontal direction, respectively. It exports tables in the LaTeX tabular environment in .tex code. It can compiled a .pdf document from the .tex code.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

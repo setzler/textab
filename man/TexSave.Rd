@@ -36,19 +36,21 @@ A list containing the path to the .tex file and the name of the .tex file.
 Compile a tabular object to a pdf file
 }
 \examples{
-# consider the following example:
-tt = TexRow(c("hello", "world"), cspan=c(1,2), surround = c("{\\\\color{red} \%s}", "{\\\\color{blue} \%s}")) + TexMidrule(list(c(1,1), c(2,3))) + TexRow(c('$\\\\alpha$','$\\\\frac{1}{2}$','$\\\\sqrt{\\\\frac{2}{3}}$'))
+# consider the following example textab object:
+tt = TexRow(c("hello", "world")) + TexRow(c(1,2))
+
+# define the positions for each column:
+pos = c("l","c")
+
+# choose an output path:
+op = getwd()
 
 # Save a simple .tex document containing this table:
 # not run:
-# TexSave(tab = tt, positions = c("l","c","c"), filename = "example1", output_path = "~/github/textab/inst/")
+# TexSave(tab = tt, positions = pos, filename = "example1", output_path = op)
 
-# Save the .tex document as stand-alone, which includes LaTex headers and packages:
+# Save the .tex document as stand-alone, which includes LaTeX headers and packages:
 # not run:
-# TexSave(tab = tt, positions = c("l","c","c"), filename = "example2", output_path = "~/github/textab/inst/", stand_alone = TRUE)
-
-# Save the .tex document as stand-alone and compile it to PDF:
-# not run:
-# TexSave(tab = tt, positions = c("l","c","c"), filename = "example2", output_path = "~/github/textab/inst/", stand_alone = TRUE, compile_tex = TRUE)
+# TexSave(tab = tt, positions = pos, filename = "example2", output_path = op, stand_alone = TRUE)
 
 }
