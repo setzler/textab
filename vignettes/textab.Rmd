@@ -215,14 +215,14 @@ Save a simple .tex document containing this table:
 
 ```{r echo=TRUE, eval=FALSE, message=FALSE}
 TexSave(tab = tt, positions = c("l","c","c"),
-        filename = "example1", output_path = "~/github/textab/inst/")
+        filename = "example1", output_path = paste0(getwd(),"/inst/"))
 ```
 
 Save a stand-alone .tex document that could be compiled, as it has begin-document and end-document statements as well as import statements for common LaTeX packages:
 
 ```{r echo=TRUE, eval=FALSE, message=FALSE}
 TexSave(tab = tt, positions = c("l","c","c"),
-        filename = "example2", output_path = "~/github/textab/inst/", 
+        filename = "example2", output_path = paste0(getwd(),"/inst/"), 
         stand_alone = TRUE)
 ```
 
@@ -239,7 +239,7 @@ Produce and compile the stand-alone .tex document to .pdf:
 
 ```{r echo=TRUE, eval=FALSE, message=FALSE}
 TexSave(tab = tt, positions = c("l","c","c"),
-        filename = "example3", output_path = "~/github/textab/inst/", 
+        filename = "example3", output_path = paste0(getwd(),"/inst/"), 
         stand_alone = TRUE, compile_tex = TRUE)
 ```
 
