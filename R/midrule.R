@@ -1,6 +1,18 @@
 
 #' Create one (or many) partial midrule(s).
 #' @param rule_list (list). A list of integer vectors. Each integer vector must contain two integers which indicate the start and end column of the partial midrule. If rule_list = NULL, it returns the full midrule across all columns. The default is rule_list = NULL.
+#' @examples
+#' # set up two textab blocks:
+#' block1 = TexRow(c("hello","world","block"))
+#' block2 = TexRow(c(5.081, 2.345, 6.789), dec=1)
+#'
+#' # add a full midrule between the two blocks
+#' block1 + TexMidrule() + block2
+#'
+#' # add a partial midrule to the first column and spanning the second-third columns:
+#' block1 + TexMidrule(list(c(1,1), c(2,3))) + block2
+#'
+#' @return The output is a textab block. A block can be an entire row, or part of a row, of a LaTeX tabular. A block can be concatenated horizontally with another block using the minus sign (-) or stacked vertically with another block using the plus sign (+).
 #' @export
 TexMidrule <- function(rule_list = NULL) {
   if(is.null(rule_list)){

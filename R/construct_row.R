@@ -10,6 +10,39 @@
 #' @param dollar (logical). Only relevant if `value` is numeric. If TRUE, a dollar sign "$" will be added to the end of each entry of `value`. If scalar, it will be used for all entries of `value`. If vector, must be the same length as `value`.
 #' @param se (logical). Only relevant if `value` is numeric. If TRUE, `value` will be wrapped in parentheses. If scalar, it will be used for all entries of `value`. If vector, must be the same length as `value`.
 #' @param pvalues (numeric). Only relevant if `value` is numeric. If not NULL, must be numeric. If less than 0.1, a star will be added to the end of each entry of `value`. If less than 0.05, a second star will be appended. If less than 0.01, a third star  will be appended. If scalar, the same p-value will be assumed for all entries of `value`. If vector, must be the same length as `value`.
+#' @examples
+#' # basic character row:
+#' vec = c("hello", "world")
+#' TexRow(vec)
+#'
+#' # character row with LaTeX formatting:
+#' vec = c('Hello','\\textbf{World}','$\\alpha$','$\\frac{1}{2}$')
+#' TexRow(vec)
+#'
+#' # basic numeric row:
+#' vec <- c(1.0, 1.01, 1.001)
+#' TexRow(vec)
+#' TexRow(vec, dec = 2) # round to second decimal place
+#'
+#' # custom formatting of numbers using surround argument:
+#' vec = c(5.081, 2.345, 6.789)
+#' TexRow(vec, dec = 1, surround = "{\\color{red} %s}")
+#'
+#' # use cspan argument to merge the second and third rows:
+#' vec = c("hello", "world")
+#' TexRow(vec, cspan = c(1,2))
+#' TexRow(vec, cspan = c(1,2), position = "c") # center merged columns
+#'
+#' # concatenate blocks vertically or horizontally:
+#' block1 = TexRow(c("hello","world","block"))
+#' block2 = TexRow(c(5.081, 2.345, 6.789), dec=1)
+#' block1 - block2 # horizontal
+#' block1 + block2 # vertical
+#'
+#' # add 3pt of vertical space between two rows using the space argument:
+#' TexRow(c("hello", "world"), space=3) + TexRow(c('$\\alpha$','$\\frac{1}{2}$'))
+#'
+#' @return The output is a textab block. A block can be an entire row, or part of a row, of a LaTeX tabular. A block can be concatenated horizontally with another block using the minus sign (-) or stacked vertically with another block using the plus sign (+).
 #' @export
 TexRow <- function(value, cspan = rep(1, length(value)), position = "r", surround = "%s", space = 0, dec = 3, percentage = FALSE, dollar = FALSE, se = FALSE, pvalues = NULL) {
 

@@ -19,7 +19,13 @@ using the `+` and `-` operators for concatenation.
 - minus sign (`-`): Combine rows side-by-side (forming a wider row).
 - plus sign (`+`): Stack rows vertically (for multiple rows).
 
-To install the package:
+To install the package from CRAN:
+
+``` r
+install.packages("textab")
+```
+
+To install the package from Github:
 
 ``` r
 devtools::install_github("setzler/textab")

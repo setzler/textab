@@ -30,7 +30,13 @@ the `+` and `-` operators for concatenation.
   - plus sign (`+`): Stack rows vertically (for multiple rows).
 
 
-To install the package:
+To install the package from CRAN:
+
+```{r echo=T, eval=FALSE, message=FALSE}
+install.packages("textab")
+```
+
+To install the package from Github:
 
 ```{r echo=T, eval=FALSE, message=FALSE}
 devtools::install_github("setzler/textab")

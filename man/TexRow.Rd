@@ -38,6 +38,42 @@ TexRow(
 
 \item{pvalues}{(numeric). Only relevant if \code{value} is numeric. If not NULL, must be numeric. If less than 0.1, a star will be added to the end of each entry of \code{value}. If less than 0.05, a second star will be appended. If less than 0.01, a third star  will be appended. If scalar, the same p-value will be assumed for all entries of \code{value}. If vector, must be the same length as \code{value}.}
 }
+\value{
+The output is a textab block. A block can be an entire row, or part of a row, of a LaTeX tabular. A block can be concatenated horizontally with another block using the minus sign (-) or stacked vertically with another block using the plus sign (+).
+}
 \description{
 This function creates a row of a LaTeX table.
+}
+\examples{
+# basic character row:
+vec = c("hello", "world")
+TexRow(vec)
+
+# character row with LaTeX formatting:
+vec = c('Hello','\\\\textbf{World}','$\\\\alpha$','$\\\\frac{1}{2}$')
+TexRow(vec)
+
+# basic numeric row:
+vec <- c(1.0, 1.01, 1.001)
+TexRow(vec)
+TexRow(vec, dec = 2) # round to second decimal place
+
+# custom formatting of numbers using surround argument:
+vec = c(5.081, 2.345, 6.789)
+TexRow(vec, dec = 1, surround = "{\\\\color{red} \%s}")
+
+# use cspan argument to merge the second and third rows:
+vec = c("hello", "world")
+TexRow(vec, cspan = c(1,2))
+TexRow(vec, cspan = c(1,2), position = "c") # center merged columns
+
+# concatenate blocks vertically or horizontally:
+block1 = TexRow(c("hello","world","block"))
+block2 = TexRow(c(5.081, 2.345, 6.789), dec=1)
+block1 - block2 # horizontal
+block1 + block2 # vertical
+
+# add 3pt of vertical space between two rows using the space argument:
+TexRow(c("hello", "world"), space=3) + TexRow(c('$\\\\alpha$','$\\\\frac{1}{2}$'))
+
 }

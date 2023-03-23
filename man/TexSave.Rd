@@ -15,7 +15,7 @@ TexSave(
 )
 }
 \arguments{
-\item{tab}{Object created by TexRow()}
+\item{tab}{textab block, created by TexRow().}
 
 \item{filename}{(character). The file will be saved as filename.tex.}
 
@@ -25,10 +25,31 @@ TexSave(
 
 \item{output_path}{(character). This is the directory path where the file should be saved. Default is the current directory.}
 
-\item{stand_alone}{(logical). If TRUE, the tabular will be exported in a TeX file that can be compiled to PDF directly (rather than included in a separate TeX file). Default is FALSE.}
+\item{stand_alone}{(logical). If TRUE, the tabular will be exported in a .tex file that can be compiled to PDF directly (rather than included in a separate .tex file). Default is FALSE.}
 
-\item{compile_tex}{(logical). If TRUE, pdflatex is used to compile the TeX table into a PDF. This is only allowed if stand_alone=TRUE. Default is FALSE.}
+\item{compile_tex}{(logical). If TRUE and stand_alone is TRUE, pdflatex is used to compile the TeX table into a PDF. This is only allowed if stand_alone=TRUE. Default is FALSE.}
+}
+\value{
+A list containing the path to the .tex file and the name of the .tex file.
 }
 \description{
 Compile a tabular object to a pdf file
+}
+\examples{
+# consider the following example:
+tt = TexRow(c("hello", "world"), cspan=c(1,2), surround = c("{\\\\color{red} \%s}", "{\\\\color{blue} \%s}")) +
+TexMidrule(list(c(1,1), c(2,3))) + TexRow(c('$\\\\alpha$','$\\\\frac{1}{2}$','$\\\\sqrt{\\\\frac{2}{3}}$'))
+
+# Save a simple .tex document containing this table:
+# not run:
+# TexSave(tab = tt, positions = c("l","c","c"), filename = "example1", output_path = "~/github/textab/inst/")
+
+# Save the .tex document as stand-alone, which includes LaTex headers and packages:
+# not run:
+# TexSave(tab = tt, positions = c("l","c","c"), filename = "example2", output_path = "~/github/textab/inst/", stand_alone = TRUE)
+
+# Save the .tex document as stand-alone and compile it to PDF:
+# not run:
+# TexSave(tab = tt, positions = c("l","c","c"), filename = "example2", output_path = "~/github/textab/inst/", stand_alone = TRUE, compile_tex = TRUE)
+
 }
