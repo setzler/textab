@@ -11,6 +11,9 @@
 
 \item{...}{Placeholder for print.}
 }
+\value{
+Print prints its argument and returns it invisibly.
+}
 \description{
 Print a textab block as a LaTeX tabular.
 }

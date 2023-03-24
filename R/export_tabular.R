@@ -15,21 +15,20 @@
 #' pos = c("l","c")
 #'
 #' # choose an output path:
-#' op = getwd()
+#' op = tempdir()
 #'
 #' # Save a simple .tex document containing this table:
-#' # not run:
-#' # TexSave(tab = tt, positions = pos, filename = "example1", output_path = op)
+#' TexSave(tab = tt, positions = pos, filename = "example1", output_path = op)
 #'
 #' # Save the .tex document as stand-alone, which includes LaTeX headers and packages:
-#' # not run:
-#' # TexSave(tab = tt, positions = pos, filename = "example2", output_path = op, stand_alone = TRUE)
+#' TexSave(tab = tt, positions = pos, filename = "example2", output_path = op, stand_alone = TRUE)
 #'
 #' @return A list containing the path to the .tex file and the name of the .tex file.
 #' @export
 TexSave <- function(tab, filename, positions, pretty_rules = TRUE, output_path = getwd(), stand_alone=FALSE, compile_tex = FALSE) {
   tab <- tt_tabularize(tab, pretty_rules = pretty_rules, positions = positions)
   current_wd <- getwd()
+  on.exit(setwd(current_wd))
   if (!(class(output_path) %in% c("character"))) {
     stop("output_path must be character.")
   }
@@ -47,7 +46,6 @@ TexSave <- function(tab, filename, positions, pretty_rules = TRUE, output_path =
   if(!stand_alone){
     tt_save(tab, filename = filename, stand_alone = FALSE)
   }
-  setwd(current_wd)
   return(list(output_path = output_path, filename = filename))
 }
 

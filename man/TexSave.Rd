@@ -43,14 +43,12 @@ tt = TexRow(c("hello", "world")) + TexRow(c(1,2))
 pos = c("l","c")
 
 # choose an output path:
-op = getwd()
+op = tempdir()
 
 # Save a simple .tex document containing this table:
-# not run:
-# TexSave(tab = tt, positions = pos, filename = "example1", output_path = op)
+TexSave(tab = tt, positions = pos, filename = "example1", output_path = op)
 
 # Save the .tex document as stand-alone, which includes LaTeX headers and packages:
-# not run:
-# TexSave(tab = tt, positions = pos, filename = "example2", output_path = op, stand_alone = TRUE)
+TexSave(tab = tt, positions = pos, filename = "example2", output_path = op, stand_alone = TRUE)
 
 }

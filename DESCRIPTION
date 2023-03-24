@@ -1,11 +1,11 @@
 Package: textab
-Title: Create Highly-Customized LaTeX Tables in R
+Title: Create Highly-Customized LaTeX Tables
 Version: 1.0
 Authors@R: c(
       person("Thibaut", "Lamadon", , "thibaut.lamadon@gmail.com", role = c("aut","cph")),
       person("Bradley", "Setzler", , "bradley.setzler@gmail.com", role = c("aut","cre","cph"))
     )
-Description: Generates LaTeX tables directly from R. It builds LaTeX tables in blocks, in the spirit of ggplot2, using the + and - operators for concatenation in the vertical and horizontal directions, respectively. It exports tables in the LaTeX tabular environment using .tex code. It can automatically compile .tex code to .pdf.
+Description: Generate 'LaTeX' tables directly from R. It builds 'LaTeX' tables in blocks in the spirit of 'ggplot2' using the + and - operators for concatenation in the vertical and horizontal dimensions, respectively. It exports tables in the 'LaTeX' tabular environment using '.tex' code. It can compile '.tex' code to 'PDF' automatically.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

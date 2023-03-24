@@ -8,6 +8,7 @@ tt_block <- function(nrow = 0, ncol = 0, row_list = list(), row_ending = list(),
 #' Print a textab block as a LaTeX tabular.
 #' @param x A textab block.
 #' @param ... Placeholder for print.
+#' @return Print prints its argument and returns it invisibly.
 #' @export print.tt_block
 #' @export
 print.tt_block <- function(x, ...) {
@@ -18,6 +19,7 @@ print.tt_block <- function(x, ...) {
 #' Concatenate textab blocks horizontally (side-by-side).
 #' @param top_row The top tabular row.
 #' @param bottom_row The bottom tabular row.
+#' @return A block of a tabular, formed by horizontally concatenating the two provided blocks.
 #' @export -.tt_
 #' @export
 `-.tt_` <- function(top_row, bottom_row) {
@@ -34,6 +36,7 @@ print.tt_block <- function(x, ...) {
 #' Concatenate textab blocks vertically.
 #' @param left_block The left block of the tabular row.
 #' @param right_block The right block of the tabular row.
+#' @return A block of a tabular, formed by vertically concatenating the two provided blocks.
 #' @export +.tt_
 #' @export
 `+.tt_` <- function(left_block, right_block) {

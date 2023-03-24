@@ -11,6 +11,9 @@
 
 \item{bottom_row}{The bottom tabular row.}
 }
+\value{
+A block of a tabular, formed by horizontally concatenating the two provided blocks.
+}
 \description{
 Concatenate textab blocks horizontally (side-by-side).
 }

@@ -11,6 +11,9 @@
 
 \item{right_block}{The right block of the tabular row.}
 }
+\value{
+A block of a tabular, formed by vertically concatenating the two provided blocks.
+}
 \description{
 Concatenate textab blocks vertically.
 }
