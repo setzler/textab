@@ -1,4 +1,4 @@
-textab: Create Highly-Customized LaTeX tables in R
+textab: Create Highly-Customized LaTeX Tables in R
 ================
 
 Created by Thibaut Lamadon and Bradley Setzler
@@ -39,8 +39,8 @@ library(textab)
 
 To get started, read the following articles:
 
-- [Get Started](https://setzler.github.io/textab/articles/textab.html).
+- [Get Started](https://setzler.github.io/textab/articles/textab.html)
 - [Function
-  Documentation](https://setzler.github.io/textab/reference/index.html).
+  Documentation](https://setzler.github.io/textab/reference/index.html)
 - [Formatting
-  Numbers](https://setzler.github.io/textab/articles/Numerics.html).
+  Numbers](https://setzler.github.io/textab/articles/Numerics.html)

@@ -1,5 +1,5 @@
 ---
-title: "textab: Create Highly-Customized LaTeX tables in R" 
+title: "textab: Create Highly-Customized LaTeX Tables in R" 
 output: github_document
 knit: (function(inputFile, encoding) {
         Sys.setenv(RSTUDIO_PANDOC='/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools');
@@ -50,9 +50,9 @@ library(textab)
 
 To get started, read the following articles:
 
-- [Get Started](https://setzler.github.io/textab/articles/textab.html).
-- [Function Documentation](https://setzler.github.io/textab/reference/index.html).
-- [Formatting Numbers](https://setzler.github.io/textab/articles/Numerics.html).
+- [Get Started](https://setzler.github.io/textab/articles/textab.html)
+- [Function Documentation](https://setzler.github.io/textab/reference/index.html)
+- [Formatting Numbers](https://setzler.github.io/textab/articles/Numerics.html)
 
 
 
