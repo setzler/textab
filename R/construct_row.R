@@ -36,7 +36,7 @@
 #' # concatenate blocks vertically or horizontally:
 #' block1 = TexRow(c("hello","world","block"))
 #' block2 = TexRow(c(5.081, 2.345, 6.789), dec=1)
-#' block1 - block2 # horizontal
+#' block1 / block2 # horizontal
 #' block1 + block2 # vertical
 #'
 #' # add 3pt of vertical space between two rows using the space argument:

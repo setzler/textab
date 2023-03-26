@@ -1,5 +1,5 @@
 Package: textab
-Title: Create Highly-Customized LaTeX Tables
+Title: Create Highly-Customized 'LaTeX' Tables
 Version: 1.0
 Authors@R: c(
       person("Thibaut", "Lamadon", , "thibaut.lamadon@gmail.com", role = c("aut","cph")),
