@@ -83,28 +83,28 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># define some textab blocks</span></span></span>
 <span class="r-in"><span><span class="va">first_block</span> <span class="op">=</span> <span class="fu"><a href="TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">first_block</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:20:42 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:29:34 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1.000 &amp; 2.000 \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">second_block</span> <span class="op">=</span> <span class="fu"><a href="TexRow.html">TexRow</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">second_block</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:20:42 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:29:34 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{r}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3.000 \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">third_block</span> <span class="op">=</span> <span class="fu"><a href="TexRow.html">TexRow</a></span><span class="op">(</span><span class="fl">4</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">third_block</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:20:42 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:29:34 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{r}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4.000 \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># concatenate two blocks vertically</span></span></span>
 <span class="r-in"><span><span class="va">first_block</span> <span class="op">+</span> <span class="va">second_block</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:20:42 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:29:34 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1.000 &amp; 2.000 \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3.000 \\</span>
@@ -112,7 +112,7 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># concatenate three blocks vertically</span></span></span>
 <span class="r-in"><span><span class="va">first_block</span> <span class="op">+</span> <span class="va">second_block</span> <span class="op">+</span> <span class="va">third_block</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:20:42 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:29:34 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1.000 &amp; 2.000 \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3.000 \\</span>
@@ -122,7 +122,7 @@
 <span class="r-in"><span><span class="co"># concatenate both horizontally and vertically</span></span></span>
 <span class="r-in"><span><span class="co"># note: horizontal concatenation takes precedence over vertical concatenation</span></span></span>
 <span class="r-in"><span><span class="va">first_block</span> <span class="op">+</span> <span class="va">second_block</span> <span class="op">/</span> <span class="va">third_block</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:20:42 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:29:34 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1.000 &amp; 2.000 \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3.000 &amp; 4.000 \\</span>

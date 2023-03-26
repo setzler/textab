@@ -17,8 +17,8 @@ print.tt_block <- function(x, ...) {
 }
 
 #' Concatenate textab blocks horizontally (side-by-side).
-#' @param left_row The left tabular row.
-#' @param right_row The right tabular row.
+#' @param left_block The left block of the tabular row.
+#' @param right_block The right block of the tabular row.
 #' @return A block of a tabular, formed by horizontally concatenating the two provided blocks.
 #' @examples
 #' # define some textab blocks
@@ -43,13 +43,13 @@ print.tt_block <- function(x, ...) {
 #'
 #' @export /.tt_
 #' @export
-`/.tt_` <- function(left_row, right_row) {
-  if (("tt_block" %in% class(left_row)) && ("tt_block" %in% class(right_row))) {
+`/.tt_` <- function(left_block, right_block) {
+  if (("tt_block" %in% class(left_block)) && ("tt_block" %in% class(right_block))) {
     block <- tt_block()
-    block$row_list[[1]] <- c(left_row$row_list[[1]], right_row$row_list[[1]])
-    block$row_ending <- right_row$row_ending
-    block$ncol <- left_row$ncol + right_row$ncol
-    block$nrow <- left_row$nrow
+    block$row_list[[1]] <- c(left_block$row_list[[1]], right_block$row_list[[1]])
+    block$row_ending <- right_block$row_ending
+    block$ncol <- left_block$ncol + right_block$ncol
+    block$nrow <- left_block$nrow
     return(block)
   }
 }

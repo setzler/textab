@@ -4,12 +4,12 @@
 \alias{/.tt_}
 \title{Concatenate textab blocks horizontally (side-by-side).}
 \usage{
-\method{/}{tt_}(left_row, right_row)
+\method{/}{tt_}(left_block, right_block)
 }
 \arguments{
-\item{left_row}{The left tabular row.}
+\item{left_block}{The left block of the tabular row.}
 
-\item{right_row}{The right tabular row.}
+\item{right_block}{The right block of the tabular row.}
 }
 \value{
 A block of a tabular, formed by horizontally concatenating the two provided blocks.
