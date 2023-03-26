@@ -47,13 +47,13 @@
 TexRow <- function(value, cspan = rep(1, length(value)), position = "r", surround = "%s", space = 0, dec = 3, percentage = FALSE, dollar = FALSE, se = FALSE, pvalues = NULL) {
 
   # if numeric, apply formatting rules to value. return character.
-  if (class(value) %in% c("numeric")) {
+  if (class(value) %in% c("numeric","integer")) {
     value <- tt_formatNum(x = value, dec = dec, percentage = percentage, dollar = dollar, se = se, pvalues = pvalues)
   }
 
   # make sure value is now character.
   if (!(class(value) %in% c("character"))) {
-    stop("Input must be numeric or character vector.")
+    stop("Argument `value` must be numeric or character vector. See ?TexRow for details.")
   }
 
   # apply expansions.
