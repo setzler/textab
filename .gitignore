@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 inst/doc
+.vscode/
+CRAN-SUBMISSION
