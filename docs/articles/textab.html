@@ -100,7 +100,7 @@
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; hello &amp; world \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -108,7 +108,7 @@
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Hello'</span>,<span class="st">'\\textbf{World}'</span>,<span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrrr}</span></span>
 <span><span class="co">#&gt; Hello &amp; \textbf{World} &amp; $\alpha$ &amp; $\frac{1}{2}$ \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -121,7 +121,7 @@
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.0</span>, <span class="fl">1.01</span>, <span class="fl">1.001</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
 <span><span class="co">#&gt; 1.000 &amp; 1.010 &amp; 1.001 \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -129,7 +129,7 @@
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.0</span>, <span class="fl">1.01</span>, <span class="fl">1.001</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
 <span><span class="co">#&gt; 1.00 &amp; 1.01 &amp; 1.00 \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -167,7 +167,7 @@ each number red, we would specify the following:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5.081</span>, <span class="fl">2.345</span>, <span class="fl">6.789</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">1</span>, surround <span class="op">=</span> <span class="st">"{\\color{red} %s}"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
 <span><span class="co">#&gt; {\color{red} 5.1} &amp; {\color{red} 2.3} &amp; {\color{red} 6.8} \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -177,7 +177,7 @@ well, and we can apply different formatting to each value:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">1</span>, surround <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"{\\color{blue} %s}"</span>, <span class="st">"$\\frac{\\text{%s}}{2}$"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; {\color{blue} hello} &amp; $\frac{\text{world}}{2}$ \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -190,7 +190,7 @@ well, and we can apply different formatting to each value:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, cspan <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; hello &amp; \multicolumn{2}{r}{world} \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -199,7 +199,7 @@ well, and we can apply different formatting to each value:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, cspan <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span>, position <span class="op">=</span> <span class="st">"l"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; hello &amp; \multicolumn{2}{l}{world} \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -208,7 +208,7 @@ the second is three-column right-aligned:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, cspan <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span>, position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"l"</span>,<span class="st">"r"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; \multicolumn{2}{l}{hello} &amp; \multicolumn{3}{r}{world} \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -225,7 +225,7 @@ the second is three-column right-aligned:</p>
 <span><span class="va">second_block</span> <span class="op">=</span> <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"$\\alpha$"</span>,<span class="st">"$\\frac{1}{2}$"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">combined_row</span> <span class="op">=</span> <span class="va">first_block</span> <span class="op">-</span> <span class="va">second_block</span></span>
 <span><span class="va">combined_row</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrrr}</span></span>
 <span><span class="co">#&gt; hello &amp; world &amp; $\alpha$ &amp; $\frac{1}{2}$ \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -239,7 +239,7 @@ the second is three-column right-aligned:</p>
 <span><span class="va">second_block</span> <span class="op">=</span> <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"$\\alpha$"</span>,<span class="st">"$\\frac{1}{2}$"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">combined_row</span> <span class="op">=</span> <span class="va">first_block</span> <span class="op">+</span> <span class="va">second_block</span></span>
 <span><span class="va">combined_row</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; hello &amp; world \\</span></span>
 <span><span class="co">#&gt; $\alpha$ &amp; $\frac{1}{2}$ \\</span></span>
@@ -253,7 +253,7 @@ the second is three-column right-aligned:</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span>, space<span class="op">=</span><span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; hello &amp; world \\[3pt]</span></span>
 <span><span class="co">#&gt; $\alpha$ &amp; $\frac{1}{2}$ \\</span></span>
@@ -267,7 +267,7 @@ the second is three-column right-aligned:</p>
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span>, cspan<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="../reference/TexMidrule.html">TexMidrule</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span>,<span class="st">'$\\sqrt{\\frac{2}{3}}$'</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
 <span><span class="co">#&gt; hello &amp; \multicolumn{2}{r}{world} \\</span></span>
 <span><span class="co">#&gt; \midrule </span></span>
@@ -278,7 +278,7 @@ the second is three-column right-aligned:</p>
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span>, cspan<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="../reference/TexMidrule.html">TexMidrule</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span>,<span class="st">'$\\sqrt{\\frac{2}{3}}$'</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textables on Fri Mar 24 14:11:44 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
 <span><span class="co">#&gt; hello &amp; \multicolumn{2}{r}{world} \\</span></span>
 <span><span class="co">#&gt;  \cmidrule(lr){1-1} \cmidrule(lr){2-3} </span></span>

@@ -49,7 +49,7 @@ TexSave <- function(tab, filename, positions, pretty_rules = TRUE, output_path =
   return(list(output_path = output_path, filename = filename))
 }
 
-# Convert the textable object to a LaTeX tabular.
+# Convert the textab object to a LaTeX tabular.
 tt_tabularize <- function(tt, positions = rep("r", tt$ncol), pretty_rules = FALSE) {
   if (pretty_rules) {
     tt <- tt_rule_top() + TexMidrule() + tt + TexMidrule() + tt_rule_bottom()
@@ -67,12 +67,12 @@ tt_tabularize <- function(tt, positions = rep("r", tt$ncol), pretty_rules = FALS
   tabular <- c(tabular, "\\end{tabular}")
 
   # append comment with date of creation
-  tabular <- c(sprintf("%% created using textables on %s", format(Sys.time(), "%a %b %d %X %Y")), tabular)
+  tabular <- c(sprintf("%% created using textab on %s", format(Sys.time(), "%a %b %d %X %Y")), tabular)
 
   return(tabular)
 }
 
-# Save a textable object to .tex, with stand_alone option (not exported)
+# Save a textab object to .tex, with stand_alone option (not exported)
 tt_save <- function(tabular, filename, stand_alone = FALSE) {
   if (stand_alone) {
     tabular <- c(
