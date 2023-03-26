@@ -100,7 +100,7 @@
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:44 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; hello &amp; world \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -108,7 +108,7 @@
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Hello'</span>,<span class="st">'\\textbf{World}'</span>,<span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:44 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrrr}</span></span>
 <span><span class="co">#&gt; Hello &amp; \textbf{World} &amp; $\alpha$ &amp; $\frac{1}{2}$ \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -121,7 +121,7 @@
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.0</span>, <span class="fl">1.01</span>, <span class="fl">1.001</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:44 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
 <span><span class="co">#&gt; 1.000 &amp; 1.010 &amp; 1.001 \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -129,7 +129,7 @@
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.0</span>, <span class="fl">1.01</span>, <span class="fl">1.001</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:44 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
 <span><span class="co">#&gt; 1.00 &amp; 1.01 &amp; 1.00 \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -167,7 +167,7 @@ each number red, we would specify the following:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5.081</span>, <span class="fl">2.345</span>, <span class="fl">6.789</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">1</span>, surround <span class="op">=</span> <span class="st">"{\\color{red} %s}"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
 <span><span class="co">#&gt; {\color{red} 5.1} &amp; {\color{red} 2.3} &amp; {\color{red} 6.8} \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -177,7 +177,7 @@ well, and we can apply different formatting to each value:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">1</span>, surround <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"{\\color{blue} %s}"</span>, <span class="st">"$\\frac{\\text{%s}}{2}$"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; {\color{blue} hello} &amp; $\frac{\text{world}}{2}$ \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -190,7 +190,7 @@ well, and we can apply different formatting to each value:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, cspan <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; hello &amp; \multicolumn{2}{r}{world} \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -199,7 +199,7 @@ well, and we can apply different formatting to each value:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, cspan <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span>, position <span class="op">=</span> <span class="st">"l"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; hello &amp; \multicolumn{2}{l}{world} \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -208,7 +208,7 @@ the second is three-column right-aligned:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="va">vec</span>, cspan <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span>, position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"l"</span>,<span class="st">"r"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; \multicolumn{2}{l}{hello} &amp; \multicolumn{3}{r}{world} \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -219,13 +219,13 @@ the second is three-column right-aligned:</p>
 <div class="section level4">
 <h4 id="combine-rows-side-by-side">Combine Rows Side-by-side<a class="anchor" aria-label="anchor" href="#combine-rows-side-by-side"></a>
 </h4>
-<p>The minus sign <code>-</code> combines rows side-by-side:</p>
+<p>The slash sign <code>/</code> combines rows side-by-side:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">first_block</span> <span class="op">=</span> <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">second_block</span> <span class="op">=</span> <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"$\\alpha$"</span>,<span class="st">"$\\frac{1}{2}$"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">combined_row</span> <span class="op">=</span> <span class="va">first_block</span> <span class="op">-</span> <span class="va">second_block</span></span>
+<span><span class="va">combined_row</span> <span class="op">=</span> <span class="va">first_block</span> <span class="op">/</span> <span class="va">second_block</span></span>
 <span><span class="va">combined_row</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrrr}</span></span>
 <span><span class="co">#&gt; hello &amp; world &amp; $\alpha$ &amp; $\frac{1}{2}$ \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
@@ -239,7 +239,24 @@ the second is three-column right-aligned:</p>
 <span><span class="va">second_block</span> <span class="op">=</span> <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"$\\alpha$"</span>,<span class="st">"$\\frac{1}{2}$"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">combined_row</span> <span class="op">=</span> <span class="va">first_block</span> <span class="op">+</span> <span class="va">second_block</span></span>
 <span><span class="va">combined_row</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
+<span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
+<span><span class="co">#&gt; hello &amp; world \\</span></span>
+<span><span class="co">#&gt; $\alpha$ &amp; $\frac{1}{2}$ \\</span></span>
+<span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="order-of-operations-horizontal-comes-first">Order of Operations: Horizontal Comes First<a class="anchor" aria-label="anchor" href="#order-of-operations-horizontal-comes-first"></a>
+</h4>
+<p>When using both horizontal and vertical concatenation in the same
+line, horizontal concatenation will be performed first:</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">first_block</span> <span class="op">=</span> <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">second_block</span> <span class="op">=</span> <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"$\\alpha$"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">third_block</span> <span class="op">=</span> <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"$\\frac{1}{2}$"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">combined_row</span> <span class="op">=</span> <span class="va">first_block</span> <span class="op">+</span> <span class="va">second_block</span> <span class="op">/</span> <span class="va">third_block</span></span>
+<span><span class="va">combined_row</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; hello &amp; world \\</span></span>
 <span><span class="co">#&gt; $\alpha$ &amp; $\frac{1}{2}$ \\</span></span>
@@ -250,10 +267,10 @@ the second is three-column right-aligned:</p>
 <h2 id="vertical-space-between-rows">6. Vertical Space between Rows<a class="anchor" aria-label="anchor" href="#vertical-space-between-rows"></a>
 </h2>
 <p>To add 3pt of space between two rows:</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span>, space<span class="op">=</span><span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rr}</span></span>
 <span><span class="co">#&gt; hello &amp; world \\[3pt]</span></span>
 <span><span class="co">#&gt; $\alpha$ &amp; $\frac{1}{2}$ \\</span></span>
@@ -263,22 +280,22 @@ the second is three-column right-aligned:</p>
 <h2 id="midrule-and-partial-midrules">7. Midrule and Partial Midrules<a class="anchor" aria-label="anchor" href="#midrule-and-partial-midrules"></a>
 </h2>
 <p>Add a full midrule between two rows:</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span>, cspan<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="../reference/TexMidrule.html">TexMidrule</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span>,<span class="st">'$\\sqrt{\\frac{2}{3}}$'</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
 <span><span class="co">#&gt; hello &amp; \multicolumn{2}{r}{world} \\</span></span>
 <span><span class="co">#&gt; \midrule </span></span>
 <span><span class="co">#&gt; $\alpha$ &amp; $\frac{1}{2}$ &amp; $\sqrt{\frac{2}{3}}$ \\</span></span>
 <span><span class="co">#&gt; \end{tabular}</span></span></code></pre></div>
 <p>Add two partial midrules:</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span>, cspan<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="../reference/TexMidrule.html">TexMidrule</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span>,<span class="st">'$\\sqrt{\\frac{2}{3}}$'</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; % created using textab on Sun Mar 26 09:48:42 2023</span></span>
+<span><span class="co">#&gt; % created using textab on Sun Mar 26 18:20:45 2023</span></span>
 <span><span class="co">#&gt; \begin{tabular}{rrr}</span></span>
 <span><span class="co">#&gt; hello &amp; \multicolumn{2}{r}{world} \\</span></span>
 <span><span class="co">#&gt;  \cmidrule(lr){1-1} \cmidrule(lr){2-3} </span></span>
@@ -289,30 +306,36 @@ the second is three-column right-aligned:</p>
 <h2 id="save-a-latex-table-in--tex-format">8. Save a LaTeX table in .tex format<a class="anchor" aria-label="anchor" href="#save-a-latex-table-in--tex-format"></a>
 </h2>
 <p>Let us work with the following table:</p>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tt</span> <span class="op">=</span> <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span>, cspan<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span>, surround <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"{\\color{red} %s}"</span>, <span class="st">"{\\color{blue} %s}"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="../reference/TexMidrule.html">TexMidrule</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="../reference/TexRow.html">TexRow</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span>,<span class="st">'$\\sqrt{\\frac{2}{3}}$'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>Let us define a temporary folder in which to save output:</p>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">op</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>Save a simple .tex document containing this table:</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/TexSave.html">TexSave</a></span><span class="op">(</span>tab <span class="op">=</span> <span class="va">tt</span>, positions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"l"</span>,<span class="st">"c"</span>,<span class="st">"c"</span><span class="op">)</span>, filename <span class="op">=</span> <span class="st">"example1"</span>, output_path <span class="op">=</span> <span class="va">op</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/TexSave.html">TexSave</a></span><span class="op">(</span>tab <span class="op">=</span> <span class="va">tt</span>, positions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"l"</span>,<span class="st">"c"</span>,<span class="st">"c"</span><span class="op">)</span>, </span>
+<span>        filename <span class="op">=</span> <span class="st">"example1"</span>, output_path <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Save a stand-alone .tex document that could be compiled, as it has
 begin-document and end-document statements as well as import statements
 for common LaTeX packages:</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/TexSave.html">TexSave</a></span><span class="op">(</span>tab <span class="op">=</span> <span class="va">tt</span>, positions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"l"</span>,<span class="st">"c"</span>,<span class="st">"c"</span><span class="op">)</span>, filename <span class="op">=</span> <span class="st">"example2"</span>, output_path <span class="op">=</span> <span class="va">op</span>, stand_alone <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/TexSave.html">TexSave</a></span><span class="op">(</span>tab <span class="op">=</span> <span class="va">tt</span>, positions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"l"</span>,<span class="st">"c"</span>,<span class="st">"c"</span><span class="op">)</span>, </span>
+<span>        filename <span class="op">=</span> <span class="st">"example2"</span>, output_path <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, </span>
+<span>        stand_alone <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<p>Note: these examples saved the table to a temporary directory,
+<code><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir()</a></code>. In practice, you will likely want to save the
+table to a permanent directory. If you do not provide an
+<code>output_path</code>, the table will be saved to your current
+working directory, <code><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd()</a></code>.</p>
 </div>
 <div class="section level2">
 <h2 id="save-latex-table-and-compile-to-pdf">9. Save LaTeX Table and Compile to PDF<a class="anchor" aria-label="anchor" href="#save-latex-table-and-compile-to-pdf"></a>
 </h2>
 <p>Produce and compile the stand-alone .tex document to .pdf:</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/TexSave.html">TexSave</a></span><span class="op">(</span>tab <span class="op">=</span> <span class="va">tt</span>, positions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"l"</span>,<span class="st">"c"</span>,<span class="st">"c"</span><span class="op">)</span>, filename <span class="op">=</span> <span class="st">"example3"</span>, output_path <span class="op">=</span> <span class="va">op</span>, </span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/TexSave.html">TexSave</a></span><span class="op">(</span>tab <span class="op">=</span> <span class="va">tt</span>, positions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"l"</span>,<span class="st">"c"</span>,<span class="st">"c"</span><span class="op">)</span>, </span>
+<span>        filename <span class="op">=</span> <span class="st">"example3"</span>, output_path <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, </span>
 <span>        stand_alone <span class="op">=</span> <span class="cn">TRUE</span>, compile_tex <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p>The final command will produce a PDF similar to this: <a href="https://github.com/setzler/textab/blob/main/inst/example3.pdf" class="external-link">here</a>.</p>
+<p>The final command will produce a PDF similar to <a href="https://github.com/setzler/textab/blob/main/inst/example3.pdf" class="external-link">this</a>.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

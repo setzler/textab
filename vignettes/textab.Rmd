@@ -144,12 +144,12 @@ TexRow(vec, cspan = c(2,3), position = c("l","r"))
 
 #### Combine Rows Side-by-side
 
-The minus sign `-` combines rows side-by-side:
+The slash sign `/` combines rows side-by-side:
 
 ```{r echo=TRUE, eval=TRUE, message=FALSE} 
 first_block = TexRow(c("hello", "world"))
 second_block = TexRow(c("$\\alpha$","$\\frac{1}{2}$"))
-combined_row = first_block - second_block
+combined_row = first_block / second_block
 combined_row
 ```
 
@@ -161,6 +161,18 @@ The plus sign `+` stacks rows vertically:
 first_block = TexRow(c("hello", "world"))
 second_block = TexRow(c("$\\alpha$","$\\frac{1}{2}$"))
 combined_row = first_block + second_block
+combined_row
+```
+
+#### Order of Operations: Horizontal Comes First
+
+When using both horizontal and vertical concatenation in the same line, horizontal concatenation will be performed first:
+
+```{r echo=TRUE, eval=TRUE, message=FALSE} 
+first_block = TexRow(c("hello", "world"))
+second_block = TexRow(c("$\\alpha$"))
+third_block = TexRow(c("$\\frac{1}{2}$"))
+combined_row = first_block + second_block / third_block
 combined_row
 ```
 
@@ -207,33 +219,32 @@ tt = TexRow(c("hello", "world"), cspan=c(1,2), surround = c("{\\color{red} %s}",
   TexRow(c('$\\alpha$','$\\frac{1}{2}$','$\\sqrt{\\frac{2}{3}}$'))
 ```
 
-Let us define a temporary folder in which to save output:
-
-```{r echo=TRUE, eval=TRUE, message=FALSE}
-op <- tempdir()
-```
-
 
 Save a simple .tex document containing this table:
 
 ```{r echo=TRUE, eval=FALSE, message=FALSE}
-TexSave(tab = tt, positions = c("l","c","c"), filename = "example1", output_path = op)
+TexSave(tab = tt, positions = c("l","c","c"), 
+        filename = "example1", output_path = tempdir())
 ```
 
 Save a stand-alone .tex document that could be compiled, as it has begin-document and end-document statements as well as import statements for common LaTeX packages:
 
 ```{r echo=TRUE, eval=FALSE, message=FALSE}
-TexSave(tab = tt, positions = c("l","c","c"), filename = "example2", output_path = op, stand_alone = TRUE)
+TexSave(tab = tt, positions = c("l","c","c"), 
+        filename = "example2", output_path = tempdir(), 
+        stand_alone = TRUE)
 ```
 
+Note: these examples saved the table to a temporary directory, `tempdir()`. In practice, you will likely want to save the table to a permanent directory. If you do not provide an `output_path`, the table will be saved to your current working directory, `getwd()`.
 
 ## 9. Save LaTeX Table and Compile to PDF
 
 Produce and compile the stand-alone .tex document to .pdf:
 
 ```{r echo=TRUE, eval=FALSE, message=FALSE}
-TexSave(tab = tt, positions = c("l","c","c"), filename = "example3", output_path = op, 
+TexSave(tab = tt, positions = c("l","c","c"), 
+        filename = "example3", output_path = tempdir(), 
         stand_alone = TRUE, compile_tex = TRUE)
 ```
 
-The final command will produce a PDF similar to this: [here](https://github.com/setzler/textab/blob/main/inst/example3.pdf).
+The final command will produce a PDF similar to [this](https://github.com/setzler/textab/blob/main/inst/example3.pdf).

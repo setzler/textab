@@ -24,10 +24,10 @@ There are only three functions in this package:
   
 
 This package builds LaTeX tables in blocks, in the spirit of `ggplot2`, using
-the `+` and `-` operators for concatenation.
+the `+` and `/` operators for concatenation.
 
-  - minus sign (`-`): Combine rows side-by-side (forming a wider row).
-  - plus sign (`+`): Stack rows vertically (for multiple rows).
+  - plus sign (`+`): Stack rows vertically (forming multiple rows).
+  - slash sign (`/`): Combine rows side-by-side (forming a wider row).
 
 
 To install the package from CRAN:
