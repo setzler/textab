@@ -125,7 +125,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># basic character row:</span></span></span>
 <span class="r-in"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">TexRow</span><span class="op">(</span><span class="va">vec</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:47:02 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Tue Mar 28 12:20:28 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> hello &amp; world \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
@@ -133,7 +133,7 @@
 <span class="r-in"><span><span class="co"># character row with LaTeX formatting:</span></span></span>
 <span class="r-in"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'Hello'</span>,<span class="st">'\\textbf{World}'</span>,<span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">TexRow</span><span class="op">(</span><span class="va">vec</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:47:02 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Tue Mar 28 12:20:28 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rrrr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Hello &amp; \textbf{World} &amp; $\alpha$ &amp; $\frac{1}{2}$ \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
@@ -141,12 +141,12 @@
 <span class="r-in"><span><span class="co"># basic numeric row:</span></span></span>
 <span class="r-in"><span><span class="va">vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1.0</span>, <span class="fl">1.01</span>, <span class="fl">1.001</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">TexRow</span><span class="op">(</span><span class="va">vec</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:47:02 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Tue Mar 28 12:20:28 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rrr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1.000 &amp; 1.010 &amp; 1.001 \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
 <span class="r-in"><span><span class="fu">TexRow</span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="co"># round to second decimal place</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:47:02 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Tue Mar 28 12:20:28 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rrr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1.00 &amp; 1.01 &amp; 1.00 \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
@@ -154,7 +154,7 @@
 <span class="r-in"><span><span class="co"># custom formatting of numbers using surround argument:</span></span></span>
 <span class="r-in"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5.081</span>, <span class="fl">2.345</span>, <span class="fl">6.789</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">TexRow</span><span class="op">(</span><span class="va">vec</span>, dec <span class="op">=</span> <span class="fl">1</span>, surround <span class="op">=</span> <span class="st">"{\\color{red} %s}"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:47:02 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Tue Mar 28 12:20:28 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rrr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> {\color{red} 5.1} &amp; {\color{red} 2.3} &amp; {\color{red} 6.8} \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
@@ -162,12 +162,12 @@
 <span class="r-in"><span><span class="co"># use cspan argument to merge the second and third rows:</span></span></span>
 <span class="r-in"><span><span class="va">vec</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">TexRow</span><span class="op">(</span><span class="va">vec</span>, cspan <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:47:02 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Tue Mar 28 12:20:28 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> hello &amp; \multicolumn{2}{r}{world} \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
 <span class="r-in"><span><span class="fu">TexRow</span><span class="op">(</span><span class="va">vec</span>, cspan <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span>, position <span class="op">=</span> <span class="st">"c"</span><span class="op">)</span> <span class="co"># center merged columns</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:47:02 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Tue Mar 28 12:20:28 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> hello &amp; \multicolumn{2}{c}{world} \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
@@ -175,10 +175,13 @@
 <span class="r-in"><span><span class="co"># concatenate blocks vertically or horizontally:</span></span></span>
 <span class="r-in"><span><span class="va">block1</span> <span class="op">=</span> <span class="fu">TexRow</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>,<span class="st">"world"</span>,<span class="st">"block"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">block2</span> <span class="op">=</span> <span class="fu">TexRow</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5.081</span>, <span class="fl">2.345</span>, <span class="fl">6.789</span><span class="op">)</span>, dec<span class="op">=</span><span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">block1</span> <span class="op">-</span> <span class="va">block2</span> <span class="co"># horizontal</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in block1 - block2:</span> non-numeric argument to binary operator</span>
+<span class="r-in"><span><span class="va">block1</span> <span class="op">/</span> <span class="va">block2</span> <span class="co"># horizontal</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Tue Mar 28 12:20:28 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rrrrrr}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> hello &amp; world &amp; block &amp; 5.1 &amp; 2.3 &amp; 6.8 \\</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> \end{tabular}</span>
 <span class="r-in"><span><span class="va">block1</span> <span class="op">+</span> <span class="va">block2</span> <span class="co"># vertical</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:47:02 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Tue Mar 28 12:20:28 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rrr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> hello &amp; world &amp; block \\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5.1 &amp; 2.3 &amp; 6.8 \\</span>
@@ -186,7 +189,7 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># add 3pt of vertical space between two rows using the space argument:</span></span></span>
 <span class="r-in"><span><span class="fu">TexRow</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"hello"</span>, <span class="st">"world"</span><span class="op">)</span>, space<span class="op">=</span><span class="fl">3</span><span class="op">)</span> <span class="op">+</span> <span class="fu">TexRow</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'$\\alpha$'</span>,<span class="st">'$\\frac{1}{2}$'</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Sun Mar 26 18:47:02 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> % created using textab on Tue Mar 28 12:20:28 2023</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> \begin{tabular}{rr}</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> hello &amp; world \\[3pt]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $\alpha$ &amp; $\frac{1}{2}$ \\</span>

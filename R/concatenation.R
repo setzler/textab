@@ -19,7 +19,7 @@ print.tt_block <- function(x, ...) {
 #' Concatenate textab blocks horizontally (side-by-side).
 #' @param left_block The left block of the tabular row.
 #' @param right_block The right block of the tabular row.
-#' @return A block of a tabular, formed by horizontally concatenating the two provided blocks.
+#' @return The output is a textab block, formed by horizontally concatenating the two provided textab blocks.
 #' @examples
 #' # define some textab blocks
 #' first_block = TexRow(c(1,2))
@@ -59,7 +59,7 @@ print.tt_block <- function(x, ...) {
 #' Concatenate textab blocks vertically.
 #' @param upper_block The upper block of the tabular row.
 #' @param lower_block The lower block of the tabular row.
-#' @return A block of a tabular, formed by vertically concatenating the two provided blocks.
+#' @return The output is a textab block, formed by vertically concatenating the two provided textab blocks.
 #' @examples
 #' # define some textab blocks
 #' first_block = TexRow(c(1,2))

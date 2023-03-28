@@ -12,7 +12,7 @@
 \item{lower_block}{The lower block of the tabular row.}
 }
 \value{
-A block of a tabular, formed by vertically concatenating the two provided blocks.
+The output is a textab block, formed by vertically concatenating the two provided textab blocks.
 }
 \description{
 Concatenate textab blocks vertically.

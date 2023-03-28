@@ -10,7 +10,7 @@ TexMidrule(rule_list = NULL)
 \item{rule_list}{(list). A list of integer vectors. Each integer vector must contain two integers which indicate the start and end column of the partial midrule. If rule_list = NULL, it returns the full midrule across all columns. The default is rule_list = NULL.}
 }
 \value{
-The output is a textab block. A block can be an entire row, or part of a row, of a LaTeX tabular. A block can be concatenated horizontally with another block using the minus sign (-) or stacked vertically with another block using the plus sign (+).
+The output is a textab block.
 }
 \description{
 Create one (or many) partial midrule(s).

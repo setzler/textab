@@ -12,7 +12,7 @@
 \item{right_block}{The right block of the tabular row.}
 }
 \value{
-A block of a tabular, formed by horizontally concatenating the two provided blocks.
+The output is a textab block, formed by horizontally concatenating the two provided textab blocks.
 }
 \description{
 Concatenate textab blocks horizontally (side-by-side).

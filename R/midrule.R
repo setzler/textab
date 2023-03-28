@@ -12,7 +12,7 @@
 #' # add a partial midrule to the first column and spanning the second-third columns:
 #' block1 + TexMidrule(list(c(1,1), c(2,3))) + block2
 #'
-#' @return The output is a textab block. A block can be an entire row, or part of a row, of a LaTeX tabular. A block can be concatenated horizontally with another block using the minus sign (-) or stacked vertically with another block using the plus sign (+).
+#' @return The output is a textab block.
 #' @export
 TexMidrule <- function(rule_list = NULL) {
   if(is.null(rule_list)){
