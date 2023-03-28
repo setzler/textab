@@ -1,11 +1,11 @@
 textab: Create Highly-Customized LaTeX Tables in R
 ================
 
-[![](http://cranlogs.r-pkg.org/badges/grand-total/textab?color=green)](https://cran.r-project.org/package=textab)
-[![](https://www.r-pkg.org/badges/version/textab?color=green)](https://cran.r-project.org/package=textab)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/textab?color=blue)](https://cran.r-project.org/package=textab)
+[![](https://www.r-pkg.org/badges/version/textab?color=blue)](https://cran.r-project.org/package=textab)
 [![CRAN
 checks](https://badges.cranchecks.info/summary/textab.svg)](https://cran.r-project.org/web/checks/check_results_textab.html)
-[![](https://img.shields.io/badge/devel%20version-1.0.0.9000-green.svg)](https://github.com/setzler/textab)
+[![](https://img.shields.io/badge/devel%20version-1.0.0.9000-blue.svg)](https://github.com/setzler/textab)
 [![](https://img.shields.io/github/last-commit/setzler/textab.svg)](https://github.com/setzler/textab/commits/main)
 
 Created by Thibaut Lamadon and Bradley Setzler

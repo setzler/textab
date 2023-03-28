@@ -14,10 +14,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r echo=FALSE, results='asis', message=FALSE}
 cat(
-  badger::badge_cran_download("textab", "grand-total", "green"),
-  badger::badge_cran_release("textab", "green"),
+  badger::badge_cran_download("textab", "grand-total", "blue"),
+  badger::badge_cran_release("textab", "blue"),
   badger::badge_cran_checks("textab"),
-  badger::badge_devel("setzler/textab", "green"),
+  badger::badge_devel("setzler/textab", "blue"),
   badger::badge_last_commit("setzler/textab")
 )
 ```
