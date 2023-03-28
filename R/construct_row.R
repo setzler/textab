@@ -42,7 +42,7 @@
 #' # add 3pt of vertical space between two rows using the space argument:
 #' TexRow(c("hello", "world"), space=3) + TexRow(c('$\\alpha$','$\\frac{1}{2}$'))
 #'
-#' @return The output is a textab block. A block can be an entire row, or part of a row, of a LaTeX tabular. A block can be concatenated horizontally with another block using the minus sign (-) or stacked vertically with another block using the plus sign (+).
+#' @return The output is a textab block.
 #' @export
 TexRow <- function(value, cspan = rep(1, length(value)), position = "r", surround = "%s", space = 0, dec = 3, percentage = FALSE, dollar = FALSE, se = FALSE, pvalues = NULL) {
 

@@ -39,7 +39,7 @@ TexRow(
 \item{pvalues}{(numeric). Only relevant if \code{value} is numeric. If not NULL, must be numeric. If less than 0.1, a star will be added to the end of each entry of \code{value}. If less than 0.05, a second star will be appended. If less than 0.01, a third star  will be appended. If scalar, the same p-value will be assumed for all entries of \code{value}. If vector, must be the same length as \code{value}.}
 }
 \value{
-The output is a textab block. A block can be an entire row, or part of a row, of a LaTeX tabular. A block can be concatenated horizontally with another block using the minus sign (-) or stacked vertically with another block using the plus sign (+).
+The output is a textab block.
 }
 \description{
 This function creates a row of a LaTeX table.
