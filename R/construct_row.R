@@ -2,7 +2,7 @@
 #' This function creates a row of a LaTeX table.
 #' @param value The value(s) to be formatted. Must be a numeric or character vector.
 #' @param cspan (integer). If greater than 1, `multicolumn{cspan}{position}{value}` will be used. For example, cspan=c(1,2,1) means that the second entry of `value` should span 2 columns. Default is cspan = rep(1, length(value)).
-#' @param position (character). If cspan > 1, `multicolumn{cspan}{position}{value}` will be used. For example, position=c("l","c","r") means that the second entry of `value` should be centered. Default is "r".
+#' @param position (character). If cspan > 1, `multicolumn{cspan}{position}{value}` will be used. For example, position=c("l","c","r") means that the second entry of `value` should be centered. Default is "c".
 #' @param surround (character). This will be applied to the value as sprintf(surround, value), so surround must contain the "%s" placeholder. Default is "%s".
 #' @param space (numeric). The number of points (pt) of vertical space to append to the end of the row. Default is 0.
 #' @param dec (integer). Only relevant if `value` is numeric. Number of decimal places. If scalar, the same decimal will be used for each entry of `value`. If vector, must be the same length as `value`. Default is 3.
@@ -44,7 +44,7 @@
 #'
 #' @return The output is a textab block.
 #' @export
-TexRow <- function(value, cspan = rep(1, length(value)), position = "r", surround = "%s", space = 0, dec = 3, percentage = FALSE, dollar = FALSE, se = FALSE, pvalues = NULL) {
+TexRow <- function(value, cspan = rep(1, length(value)), position = "c", surround = "%s", space = 0, dec = 3, percentage = FALSE, dollar = FALSE, se = FALSE, pvalues = NULL) {
 
   # if numeric, apply formatting rules to value. return character.
   if (class(value) %in% c("numeric","integer")) {

@@ -7,7 +7,7 @@
 TexRow(
   value,
   cspan = rep(1, length(value)),
-  position = "r",
+  position = "c",
   surround = "\%s",
   space = 0,
   dec = 3,
@@ -22,7 +22,7 @@ TexRow(
 
 \item{cspan}{(integer). If greater than 1, \verb{multicolumn\{cspan\}\{position\}\{value\}} will be used. For example, cspan=c(1,2,1) means that the second entry of \code{value} should span 2 columns. Default is cspan = rep(1, length(value)).}
 
-\item{position}{(character). If cspan > 1, \verb{multicolumn\{cspan\}\{position\}\{value\}} will be used. For example, position=c("l","c","r") means that the second entry of \code{value} should be centered. Default is "r".}
+\item{position}{(character). If cspan > 1, \verb{multicolumn\{cspan\}\{position\}\{value\}} will be used. For example, position=c("l","c","r") means that the second entry of \code{value} should be centered. Default is "c".}
 
 \item{surround}{(character). This will be applied to the value as sprintf(surround, value), so surround must contain the "\%s" placeholder. Default is "\%s".}
 
