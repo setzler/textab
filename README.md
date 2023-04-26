@@ -4,7 +4,7 @@ textab: Create Highly-Customized LaTeX Tables in R
 [![](http://cranlogs.r-pkg.org/badges/grand-total/textab?color=blue)](https://cran.r-project.org/package=textab)
 [![](https://www.r-pkg.org/badges/version/textab?color=blue)](https://cran.r-project.org/package=textab)
 [![CRAN
-checks](https://badges.cranchecks.info/summary/textab.svg)](https://cran.r-project.org/web/checks/check_results_textab.html)
+checks](https://badges.cranchecks.info/worst/textab.svg)](https://cran.r-project.org/web/checks/check_results_textab.html)
 [![](https://img.shields.io/badge/devel%20version-1.0.1-blue.svg)](https://github.com/setzler/textab)
 [![](https://img.shields.io/github/last-commit/setzler/textab.svg)](https://github.com/setzler/textab/commits/main)
 

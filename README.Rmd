@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 cat(
   badger::badge_cran_download("textab", "grand-total", "blue"),
   badger::badge_cran_release("textab", "blue"),
-  badger::badge_cran_checks("textab"),
+  "[![CRAN checks](https://badges.cranchecks.info/worst/textab.svg)](https://cran.r-project.org/web/checks/check_results_textab.html)",
   badger::badge_devel("setzler/textab", "blue"),
   badger::badge_last_commit("setzler/textab")
 )
